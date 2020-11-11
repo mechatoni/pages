@@ -1,9 +1,7 @@
 name: Pages Pipeline
-
 on:
   push:
     branches: [service]
-
 jobs:
   build-artifact:
     runs-on: ubuntu-latest
@@ -28,7 +26,6 @@ jobs:
         with:
           name: artifact
           path: build/libs/pages.jar
-
       - name: build-docker-image
         uses: docker/build-push-action@v1
         with:
